@@ -223,17 +223,6 @@ void test_debug_mode(struct test_context *t) {
   group(t, NULL);
 }
 
-void test_debug_mode(struct test_context *t) {
-  pcomm_context_t context;
-  pcomm_context_t *c = &context;
-
-  group(t, "debug mode");
-
-  pcomm_init(c);
-
-  group(t, NULL);
-}
-
 // Run through each of the test group functions.
 void run_tests(struct test_context *t) {
   group(t, "start");
