@@ -17,6 +17,11 @@ simclist.o: simclist.c simclist.h
 libpcomm.a: $(OBJS)
 	ar -r $@ $(OBJS)
 
+tests: libpcomm.a tests.c
+
+test: tests
+	./tests
+
 clean:
-	/bin/rm -f *.o libpcomm.a
+	/bin/rm -f *.o libpcomm.a tests
 

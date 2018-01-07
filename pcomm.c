@@ -688,7 +688,7 @@ pcomm_result_t pcomm_init( pcomm_context_t *context )
 void pcomm_set_debug( pcomm_context_t *context, int debug )
 {
     if (context) {
-        context->debug = debug;
+        context->debug = (debug == 0) ? 0 : 1;
     }
 }
 
